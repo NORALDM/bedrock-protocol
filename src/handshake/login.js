@@ -43,7 +43,7 @@ module.exports = (client, server, options) => {
       DefaultInputMode: 1,
       DeviceId: nextUUID(),
       DeviceModel: 'PrismarineJS',
-      DeviceOS: client.session?.deviceOS || 7,
+      DeviceOS: 1,
       GameVersion: options.version || '1.16.201',
       GuiScale: -1,
       LanguageCode: 'en_GB', // TODO locale
@@ -67,7 +67,7 @@ module.exports = (client, server, options) => {
       OverrideSkin: client.versionGreaterThanOrEqualTo('1.19.62') ? false : undefined,
       CompatibleWithClientSideChunkGen: client.versionGreaterThanOrEqualTo('1.19.80') ? false : undefined,
 
-      MaxViewDistance: client.versionGreaterThanOrEqualTo('1.21.40') ? 0 : undefined,
+      MaxViewDistance: 10,
       MemoryTier: client.versionGreaterThanOrEqualTo('1.21.40') ? 0 : undefined,
       PlatformType: client.versionGreaterThanOrEqualTo('1.21.40') ? 0 : undefined
     }
